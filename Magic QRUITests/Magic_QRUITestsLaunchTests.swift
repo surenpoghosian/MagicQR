@@ -2,7 +2,7 @@
 //  Magic_QRUITestsLaunchTests.swift
 //  Magic QRUITests
 //
-//  Created by Garik Hovsepian on 12.01.24.
+//  Created by Garik Hovsepyan on 12.01.24.
 //
 
 import XCTest
