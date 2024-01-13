@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct AnalyticsData: Decodable{
+    let q_id: String
+    let img_url: String
+    let scan_count: Int
+}

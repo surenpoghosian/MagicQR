@@ -4,62 +4,58 @@
 //
 //  Created by Garik Hovsepyan on 12.01.24.
 //
+import UIKit
 
-import Foundation
-
-import Foundation
-
-enum NetworkError: Error {
-    case invalidURL
-    case requestFailed
-    case invalidResponse
-}
-
-class NetworkManager: NSObject {
-
-    func requestQRCode(url: String, data: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        guard let requestURL = URL(string: url) else {
-            completion(.failure(NetworkError.invalidURL))
-            return
-        }
-
-        var request = URLRequest(url: requestURL)
-        request.httpMethod = "GET"  // or "GET" based on your API
-
-        // Set the request body with your data
-        let bodyString = "data=\(data)"
-        request.httpBody = bodyString.data(using: .utf8)
-
-        let session = URLSession(configuration: .ephemeral, delegate: self, delegateQueue: .main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-            DispatchQueue.main.async {
-                if let error = error {
-                    completion(.failure(error))
-                    return
+class NetworkManager {
+    
+    static let shared = NetworkManager()
+    
+    private init() {}
+    
+    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue.global().async {
+            do {
+                let imageData = try Data(contentsOf: url)
+                let image = UIImage(data: imageData)
+                DispatchQueue.main.async {
+                    completion(image)
                 }
-
-                guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                    completion(.failure(NetworkError.requestFailed))
-                    return
+            } catch {
+                print("Error fetching image: \(error)")
+                DispatchQueue.main.async {
+                    completion(nil)
                 }
-
-                guard let data = data else {
-                    completion(.failure(NetworkError.invalidResponse))
-                    return
-                }
-
-                completion(.success(data))
             }
         }
-
-        task.resume()
     }
-}
-
-extension NetworkManager: URLSessionDelegate {
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
-            completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
+    
+    func fetchAnalyticsData(completion: @escaping ([AnalyticsData]?) -> Void) {
+        guard let url = URL(string: "http://192.168.0.155:3000/storage/qr-list?u_id=fb975798-e9e3-4407-858d-52101b4fc295") else {
+            completion(nil)
+            return
         }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error fetching data: \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let analyticsData = try decoder.decode([AnalyticsData].self, from: data)
+                completion(analyticsData)
+            } catch {
+                print("Error decoding JSON: \(error)")
+                completion(nil)
+            }
+        }.resume()
     }
+    
 }
