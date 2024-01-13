@@ -54,6 +54,8 @@
 		E865BD612B51739700B886A2 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD602B51739700B886A2 /* HistoryViewModel.swift */; };
 		E865BD622B51739700B886A2 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD602B51739700B886A2 /* HistoryViewModel.swift */; };
 		E865BD632B51739700B886A2 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD602B51739700B886A2 /* HistoryViewModel.swift */; };
+		E865BD692B5197B200B886A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E865BD682B5197B200B886A2 /* .gitignore */; };
+		E865BD6D2B519B9800B886A2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD6C2B519B9800B886A2 /* NetworkManager.swift */; };
 		E8881B1B2B5152C20002B434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8881B1A2B5152C20002B434 /* AppDelegate.swift */; };
 		E8881B1D2B5152C20002B434 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8881B1C2B5152C20002B434 /* SceneDelegate.swift */; };
 		E8881B1F2B5152C20002B434 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8881B1E2B5152C20002B434 /* RootViewController.swift */; };
@@ -100,6 +102,8 @@
 		E865BD582B51729E00B886A2 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		E865BD5C2B51736D00B886A2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		E865BD602B51739700B886A2 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		E865BD682B5197B200B886A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E865BD6C2B519B9800B886A2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E8881B172B5152C20002B434 /* Magic QR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic QR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8881B1A2B5152C20002B434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8881B1C2B5152C20002B434 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,18 +307,11 @@
 		E865BD4F2B515EC200B886A2 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E865BD6B2B519B5000B886A2 /* Network */,
 				E865BD532B515F4E00B886A2 /* File */,
 				E865BD522B515F3200B886A2 /* Storage */,
-				E865BD502B515EC700B886A2 /* Network */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		E865BD502B515EC700B886A2 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		E865BD512B515EFC00B886A2 /* Environment */ = {
@@ -374,9 +371,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E865BD6B2B519B5000B886A2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E865BD6C2B519B9800B886A2 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		E8881B0E2B5152C20002B434 = {
 			isa = PBXGroup;
 			children = (
+				E865BD682B5197B200B886A2 /* .gitignore */,
 				E865BD512B515EFC00B886A2 /* Environment */,
 				E8881B192B5152C20002B434 /* Magic QR */,
 				E8881B302B5152C30002B434 /* Magic QRTests */,
@@ -532,6 +538,7 @@
 				E865BD062B51569800B886A2 /* Production.plist in Resources */,
 				E8881B242B5152C30002B434 /* Assets.xcassets in Resources */,
 				E8881B222B5152C20002B434 /* Main.storyboard in Resources */,
+				E865BD692B5197B200B886A2 /* .gitignore in Resources */,
 				E865BD082B5156AB00B886A2 /* Development.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E865BD6D2B519B9800B886A2 /* NetworkManager.swift in Sources */,
 				E865BD592B51729E00B886A2 /* HistoryModel.swift in Sources */,
 				E865BD612B51739700B886A2 /* HistoryViewModel.swift in Sources */,
 				E865BD242B515BEB00B886A2 /* UserProfileView.swift in Sources */,
