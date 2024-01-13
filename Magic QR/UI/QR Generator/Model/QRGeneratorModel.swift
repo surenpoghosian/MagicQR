@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct QRCodeData {
+    var name: String?
+    var url: String?
+    var prompt: String?
+}
+
+struct QRCodeURL {
+    var url: [String]?
+}

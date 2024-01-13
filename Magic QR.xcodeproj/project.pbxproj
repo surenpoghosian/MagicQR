@@ -56,6 +56,18 @@
 		E865BD632B51739700B886A2 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD602B51739700B886A2 /* HistoryViewModel.swift */; };
 		E865BD692B5197B200B886A2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E865BD682B5197B200B886A2 /* .gitignore */; };
 		E865BD6D2B519B9800B886A2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD6C2B519B9800B886A2 /* NetworkManager.swift */; };
+		E865BD6F2B51A93200B886A2 /* QRGeneratorDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD6E2B51A93200B886A2 /* QRGeneratorDataView.swift */; };
+		E865BD702B51A93200B886A2 /* QRGeneratorDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD6E2B51A93200B886A2 /* QRGeneratorDataView.swift */; };
+		E865BD712B51A93200B886A2 /* QRGeneratorDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD6E2B51A93200B886A2 /* QRGeneratorDataView.swift */; };
+		E865BD732B51A94A00B886A2 /* QRGeneratorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD722B51A94A00B886A2 /* QRGeneratorPromptView.swift */; };
+		E865BD742B51A94A00B886A2 /* QRGeneratorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD722B51A94A00B886A2 /* QRGeneratorPromptView.swift */; };
+		E865BD752B51A94A00B886A2 /* QRGeneratorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD722B51A94A00B886A2 /* QRGeneratorPromptView.swift */; };
+		E865BD772B51A96E00B886A2 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD762B51A96E00B886A2 /* OutputView.swift */; };
+		E865BD782B51A96E00B886A2 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD762B51A96E00B886A2 /* OutputView.swift */; };
+		E865BD792B51A96E00B886A2 /* OutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD762B51A96E00B886A2 /* OutputView.swift */; };
+		E865BD802B527C0D00B886A2 /* AnalyticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD7F2B527C0D00B886A2 /* AnalyticsCell.swift */; };
+		E865BD812B527C0D00B886A2 /* AnalyticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD7F2B527C0D00B886A2 /* AnalyticsCell.swift */; };
+		E865BD822B527C0D00B886A2 /* AnalyticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E865BD7F2B527C0D00B886A2 /* AnalyticsCell.swift */; };
 		E8881B1B2B5152C20002B434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8881B1A2B5152C20002B434 /* AppDelegate.swift */; };
 		E8881B1D2B5152C20002B434 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8881B1C2B5152C20002B434 /* SceneDelegate.swift */; };
 		E8881B1F2B5152C20002B434 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8881B1E2B5152C20002B434 /* RootViewController.swift */; };
@@ -104,6 +116,10 @@
 		E865BD602B51739700B886A2 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		E865BD682B5197B200B886A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E865BD6C2B519B9800B886A2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E865BD6E2B51A93200B886A2 /* QRGeneratorDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorDataView.swift; sourceTree = "<group>"; };
+		E865BD722B51A94A00B886A2 /* QRGeneratorPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorPromptView.swift; sourceTree = "<group>"; };
+		E865BD762B51A96E00B886A2 /* OutputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputView.swift; sourceTree = "<group>"; };
+		E865BD7F2B527C0D00B886A2 /* AnalyticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsCell.swift; sourceTree = "<group>"; };
 		E8881B172B5152C20002B434 /* Magic QR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic QR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8881B1A2B5152C20002B434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8881B1C2B5152C20002B434 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				E865BD162B515B1100B886A2 /* QRGeneratorView.swift */,
+				E865BD6E2B51A93200B886A2 /* QRGeneratorDataView.swift */,
+				E865BD722B51A94A00B886A2 /* QRGeneratorPromptView.swift */,
+				E865BD762B51A96E00B886A2 /* OutputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				E865BD3B2B515D7400B886A2 /* AnalyticsView.swift */,
+				E865BD7F2B527C0D00B886A2 /* AnalyticsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -566,7 +586,10 @@
 			files = (
 				E865BD6D2B519B9800B886A2 /* NetworkManager.swift in Sources */,
 				E865BD592B51729E00B886A2 /* HistoryModel.swift in Sources */,
+				E865BD732B51A94A00B886A2 /* QRGeneratorPromptView.swift in Sources */,
+				E865BD772B51A96E00B886A2 /* OutputView.swift in Sources */,
 				E865BD612B51739700B886A2 /* HistoryViewModel.swift in Sources */,
+				E865BD802B527C0D00B886A2 /* AnalyticsCell.swift in Sources */,
 				E865BD242B515BEB00B886A2 /* UserProfileView.swift in Sources */,
 				E865BD442B515E0A00B886A2 /* HomePageModel.swift in Sources */,
 				E865BD382B515D4E00B886A2 /* AnalyticsViewModel.swift in Sources */,
@@ -579,6 +602,7 @@
 				E8881B1D2B5152C20002B434 /* SceneDelegate.swift in Sources */,
 				E865BD3C2B515D7400B886A2 /* AnalyticsView.swift in Sources */,
 				E865BD0F2B515A7200B886A2 /* QRGeneratorViewModel.swift in Sources */,
+				E865BD6F2B51A93200B886A2 /* QRGeneratorDataView.swift in Sources */,
 				E865BD482B515E1D00B886A2 /* HomePageView.swift in Sources */,
 				E865BD2C2B515C1600B886A2 /* UserProfileViewModel.swift in Sources */,
 				E865BD5D2B51736D00B886A2 /* HistoryView.swift in Sources */,
@@ -594,7 +618,9 @@
 				E865BD252B515BEB00B886A2 /* UserProfileView.swift in Sources */,
 				E865BD0C2B515A1B00B886A2 /* QRGeneratorModel.swift in Sources */,
 				E865BD3D2B515D7400B886A2 /* AnalyticsView.swift in Sources */,
+				E865BD702B51A93200B886A2 /* QRGeneratorDataView.swift in Sources */,
 				E865BD4D2B515E2D00B886A2 /* HomePageViewModel.swift in Sources */,
+				E865BD812B527C0D00B886A2 /* AnalyticsCell.swift in Sources */,
 				E865BD182B515B1100B886A2 /* QRGeneratorView.swift in Sources */,
 				E865BD2D2B515C1600B886A2 /* UserProfileViewModel.swift in Sources */,
 				E865BD5E2B51736D00B886A2 /* HistoryView.swift in Sources */,
@@ -605,7 +631,9 @@
 				E865BD492B515E1D00B886A2 /* HomePageView.swift in Sources */,
 				E865BD5A2B51729E00B886A2 /* HistoryModel.swift in Sources */,
 				E8881B322B5152C30002B434 /* Magic_QRTests.swift in Sources */,
+				E865BD782B51A96E00B886A2 /* OutputView.swift in Sources */,
 				E865BD622B51739700B886A2 /* HistoryViewModel.swift in Sources */,
+				E865BD742B51A94A00B886A2 /* QRGeneratorPromptView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,11 +650,15 @@
 				E865BD2A2B515C0000B886A2 /* UserProfileModel.swift in Sources */,
 				E865BD362B515D3E00B886A2 /* AnalyticsModel.swift in Sources */,
 				E865BD3E2B515D7400B886A2 /* AnalyticsView.swift in Sources */,
+				E865BD712B51A93200B886A2 /* QRGeneratorDataView.swift in Sources */,
 				E865BD0D2B515A1B00B886A2 /* QRGeneratorModel.swift in Sources */,
 				E865BD5F2B51736D00B886A2 /* HistoryView.swift in Sources */,
 				E865BD192B515B1100B886A2 /* QRGeneratorView.swift in Sources */,
 				E8881B3C2B5152C30002B434 /* Magic_QRUITests.swift in Sources */,
 				E865BD5B2B51729E00B886A2 /* HistoryModel.swift in Sources */,
+				E865BD822B527C0D00B886A2 /* AnalyticsCell.swift in Sources */,
+				E865BD792B51A96E00B886A2 /* OutputView.swift in Sources */,
+				E865BD752B51A94A00B886A2 /* QRGeneratorPromptView.swift in Sources */,
 				E865BD462B515E0A00B886A2 /* HomePageModel.swift in Sources */,
 				E865BD112B515A7200B886A2 /* QRGeneratorViewModel.swift in Sources */,
 				E865BD3A2B515D4E00B886A2 /* AnalyticsViewModel.swift in Sources */,

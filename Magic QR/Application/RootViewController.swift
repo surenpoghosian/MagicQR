@@ -19,11 +19,9 @@ class RootViewController: UIViewController, UITabBarControllerDelegate {
         tabBarController.tabBar.tintColor = UIColor(red: 0.76, green: 0.04, blue: 0.76, alpha: 1.00)
 
         let titlesAndImageNames: [(title: String, imageName: String, viewController: UIViewController)] = [
-            ("Home", "house.fill", HomePageView()),
-            ("Analytics", "chart.bar.fill", AnalyticsView()),
-            ("Magic QR", "plus.viewfinder", QRGeneratorView()),
-            ("History", "clock.fill", HistoryView()),
-            ("Profile", "person.crop.circle.fill", UserProfileView())
+            ("Analytics", "chart.bar", AnalyticsView()),
+            ("Magic QR", "plus.rectangle.fill",  UINavigationController(rootViewController: QRGeneratorView())),
+            ("History", "clock", HistoryView())
         ]
 
         let viewControllers = titlesAndImageNames.map { config in
@@ -33,6 +31,11 @@ class RootViewController: UIViewController, UITabBarControllerDelegate {
                                                      selectedImage: nil)
             return viewController
         }
+        tabBarController.viewControllers = viewControllers
+
+            if let magicQRIndex = titlesAndImageNames.firstIndex(where: { $0.title == "Magic QR" }) {
+                tabBarController.selectedIndex = magicQRIndex
+            }
 
         tabBarController.viewControllers = viewControllers
         
