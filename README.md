@@ -8,9 +8,9 @@ https://github.com/surenpoghosian/MagicQR/assets/56313895/0ef3c66a-1611-4bcf-99c
 
 <p float="left">
   <img src="https://github.com/surenpoghosian/MagicQR/assets/56313895/c8800b81-a16c-4af7-b7a1-34236acbbfaf" width="250" />
-  <img src="https://github.com/surenpoghosian/MagicQR/assets/56313895/651e77f3-bd01-486b-baca-61b1285fb262" width="250" /> 
+  
 </p>
-
+<img src="https://github.com/surenpoghosian/MagicQR/assets/56313895/651e77f3-bd01-486b-baca-61b1285fb262" /> 
 
 # What it should look like
 
